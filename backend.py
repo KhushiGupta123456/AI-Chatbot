@@ -51,3 +51,15 @@ def home():
     return {
         "message": "AI Chatbot Backend is running successfully!"
     }
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://your-frontend-name.onrender.com"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
