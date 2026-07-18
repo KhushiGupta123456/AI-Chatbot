@@ -1,0 +1,11 @@
+# activate virtual environment
+.\venv\Scripts\Activate.ps1
+
+# run ai agent
+python ai_agent.py
+
+# run backend
+uvicorn backend:app --reload --port 9999
+
+#run frontend
+streamlit run frontend.py
